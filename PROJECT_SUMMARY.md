@@ -1,4 +1,4 @@
-# Multi-Tier AWS Web Application - Project Summary
+# Multi-Tier AWS Web Application
 
 ## Project Overview
 
