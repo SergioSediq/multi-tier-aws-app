@@ -68,6 +68,6 @@ The CI/CD pipeline runs on GitHub Actions:
 
 ## Real-World Application
 
-This architecture pattern is used by countless production applications. The skills demonstrated here—automated infrastructure provisioning, security-first design, and cost-conscious scaling—directly translate to enterprise cloud operations roles.
+This architecture pattern is used by countless production applications. The skills demonstrated here are automated infrastructure provisioning, security-first design, and cost-conscious scaling which directly translate to enterprise cloud operations roles.
 
 The project proves I can take infrastructure requirements and translate them into working, maintainable code that teams can build upon.
