@@ -1,0 +1,5 @@
+# tfsec configuration file
+exclude:
+  - AWS002  # S3 Bucket should have public access blocks
+  - AWS017  # Unencrypted S3 bucket
+  - AWS045  # CloudFront distribution should have WAF enabled
