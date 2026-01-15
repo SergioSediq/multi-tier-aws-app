@@ -199,25 +199,40 @@ terraform destroy
 
 ```
 multi-tier-aws-app/
-├── terraform/
-│   ├── modules/              # Reusable Terraform modules
-│   │   ├── networking/       # VPC, subnets, gateways
-│   │   ├── compute/          # ALB, Auto Scaling, EC2
-│   │   ├── database/         # RDS PostgreSQL
-│   │   ├── storage/          # S3, CloudFront
-│   │   ├── monitoring/       # CloudWatch, SNS
-│   │   └── security/         # Security groups, IAM
-│   └── environments/         # Environment configs
-│       ├── dev/
-│       ├── staging/
-│       └── prod/
-├── application/              # Application code
-│   ├── web/                  # Frontend
-│   ├── api/                  # Backend
-│   └── Dockerfile
-├── .github/workflows/        # CI/CD pipelines
-├── scripts/                  # Deployment scripts
-└── docs/                     # Documentation
+├── terraform/                    # Infrastructure as Code
+│   ├── modules/                  # Reusable Terraform modules
+│   │   ├── vpc/                 # VPC, subnets, NAT gateways
+│   │   ├── security-groups/     # Security group configurations
+│   │   ├── rds/                 # RDS PostgreSQL database
+│   │   ├── alb/                 # Application Load Balancer
+│   │   ├── autoscaling/         # Auto Scaling Group & Launch Template
+│   │   ├── s3/                  # S3 bucket for static content
+│   │   ├── cloudfront/          # CloudFront CDN distribution
+│   │   └── cloudwatch/          # CloudWatch dashboards & alarms
+│   ├── environments/
+│   │   └── dev/                 # Development environment config
+│   ├── main.tf                  # Main Terraform configuration
+│   ├── variables.tf             # Variable definitions
+│   └── outputs.tf               # Output values
+├── application/                  # Application code
+│   ├── app.py                   # Flask web application
+│   ├── requirements.txt         # Python dependencies
+│   ├── Dockerfile               # Container definition
+│   └── .dockerignore            # Docker ignore file
+├── .github/workflows/
+│   └── ci-cd.yml                # Complete CI/CD pipeline
+├── scripts/
+│   ├── setup.sh                 # Initial setup script
+│   └── deploy.sh                # Deployment script
+├── docs/
+│   └── DEPLOYMENT.md            # Deployment guide
+├── README.md                     # Project documentation
+├── .gitignore                   # Git ignore rules
+├── .tfsec.yml                   # tfsec configuration
+├── .checkov.yml                 # Checkov configuration
+├── LICENSE                      # MIT License
+├── CONTRIBUTING.md              # Contribution guidelines
+└── CHANGELOG.md                 # Change log
 ```
 
 ---
